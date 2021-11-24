@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package rooms;
+
+option go_package = "room";
+
+import "proto/shared/shared.proto";
+
+service Rooms {
+    rpc CreateRoom(CreateRoomRequest) returns(NewRoomResponse);
+    rpc JoinRoom(JoinRequest) returns(JoinResponse);
+    rpc LeaveRoom(LeaveRequest) returns(LeaveResponse);
+    // TODO: return stream here
+    rpc FindRoom(SearchRequest) returns(RoomsFoundResponse);
+    rpc RoomDetails(RoomDetailsRequest) returns (stream RoomDetailsResponse);
+}
+
+message CreateRoomRequest {
+    string RoomName = 1;
+}
+
+message NewRoomResponse {
+    shared.Room room = 1;
+}
+
+message JoinRequest {
+    string RoomId = 1;
+}
+
+message JoinResponse {
+    enum JoinStatus {
+        Allowed = 0;
+        Denied = 1;
+    }
+
+    JoinStatus status = 1;
+}
+
+message LeaveRequest {
+    string RoomID = 1;
+}
+
+message LeaveResponse {
+
+}
+
+message SearchRequest {
+    string Term = 1;
+}
+
+message RoomsFoundResponse {
+    repeated shared.Room RoomsFound = 1;
+}
+
+message RoomDetailsRequest {
+    string RoomID = 1;
+}
+
+message RoomDetailsResponse {
+    message Participants {
+        repeated shared.User users = 1;
+        int32 count = 2;
+    }
+
+    Participants participants = 1;
+}
+

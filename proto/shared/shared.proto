@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package shared;
+
+option go_package = "shared/";
+
+message User {
+    string UserID = 1;
+    string DisplayName = 2;
+}
+
+message Room {
+    string RoomID = 1;
+    string RoomName = 2;
+    string RoomTopic = 3;
+    User Host = 4;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package user_signup;
+
+option go_package = "user_signup/";
+
+import "proto/shared/shared.proto";
+
+// The SignupService create a anonymous user each time, therefore
+// no need for credentials, the user is discarted after end of session
+service SignupService {
+    // Exchanges a UserName for unique UserId
+    rpc Signup(UserDetailsRequest) returns (UserLogginResponse);
+}
+
+message UserDetailsRequest {
+    string DisplayName = 1;
+}
+
+message UserLogginResponse {
+    shared.User User = 1;
+}
