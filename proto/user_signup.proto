@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package user_signup;
 
-option go_package = "user_signup/";
+option go_package = "grpc/user_signup/";
 
-import "proto/shared/shared.proto";
+import "proto/shared.proto";
 
 // The SignupService create a anonymous user each time, therefore
 // no need for credentials, the user is discarted after end of session

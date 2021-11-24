@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package rooms;
 
-option go_package = "room";
+option go_package = "grpc/room/";
 
-import "proto/shared/shared.proto";
+import "proto/shared.proto";
 
 service Rooms {
     rpc CreateRoom(CreateRoomRequest) returns(NewRoomResponse);
