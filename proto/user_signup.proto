@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user_signup;
 
-option go_package = "grpc/user_signup/";
+option go_package = "github.com/dimitarsi/go-chat-app/grpc/user_signup/";
 
 import "proto/shared.proto";
 
