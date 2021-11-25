@@ -11,10 +11,22 @@ type RoomService struct {
 }
 
 
-func (r * RoomService)	CreateRoom(context.Context, *r.CreateRoomRequest) (*r.NewRoomResponse, error) {
-	nr := r.NewRoomResponse{}
+func (rs * RoomService)	CreateRoom(context.Context, *r.CreateRoomRequest) (*r.NewRoomResponse, error) {
+	nr := &r.NewRoomResponse{}
+
+	return nr, nil
 }
-func (r * RoomService)	JoinRoom(context.Context, *r.JoinRequest) (*r.JoinResponse, error) {}
-func (r * RoomService)	LeaveRoom(context.Context, *r.LeaveRequest) (*r.LeaveResponse, error) {}
-func (r * RoomService)	FindRoom(context.Context, *r.SearchRequest) (*r.RoomsFoundResponse, error) {}
-func (r * RoomService)	RoomDetails(*r.RoomDetailsRequest, *r.Rooms_RoomDetailsServer) error {}
+func (rs * RoomService)	JoinRoom(context.Context, *r.JoinRequest) (*r.JoinResponse, error) {
+	return &r.JoinResponse{}, nil
+}
+
+func (rs * RoomService)	LeaveRoom(ctx context.Context,in *r.LeaveRequest) (*r.LeaveResponse, error) {
+	return &r.LeaveResponse{}, nil
+}
+func (rs * RoomService)	FindRoom(ctx context.Context,in *r.SearchRequest) (*r.RoomsFoundResponse, error) {
+	return &r.RoomsFoundResponse{}, nil
+}
+func (rs * RoomService)	RoomDetails(in *r.RoomDetailsRequest, s r.Rooms_RoomDetailsServer) error {
+
+	return nil
+}

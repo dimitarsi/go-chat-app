@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package rooms;
 
-option go_package = "github.com/dimitarsi/go-chat-app/grpc/room/";
+option go_package = "github.com/dimitarsi/go-chat-app/grpc/room";
 
 import "proto/shared.proto";
 
