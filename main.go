@@ -22,5 +22,9 @@ func main() {
 
 	room.RegisterRoomsServer(s, &service.RoomService{})
 
-	s.Serve(lis)
+	err = s.Serve(lis)
+
+	if err == nil {
+		fmt.Printf("Chat service started on port :5000")
+	}
 }
