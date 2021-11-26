@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package shared;
 
-option go_package = "github.com/dimitarsi/go-chat-app/grpc/shared/";
+option go_package = "github.com/dimitarsi/go-chat-app/grpc/shared";
 
 message User {
     string UserID = 1;
