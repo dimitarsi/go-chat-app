@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "rooms.Rooms.JoinRoom"
+  },
+  "requests": [
+    {
+      "location": "JoinRoom-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

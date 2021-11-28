@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "rooms.Rooms.LeaveRoom"
+  },
+  "requests": [
+    {
+      "location": "LeaveRoom-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

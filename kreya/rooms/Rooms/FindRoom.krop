@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "rooms.Rooms.FindRoom"
+  },
+  "requests": [
+    {
+      "location": "FindRoom-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

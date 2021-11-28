@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "rooms.Rooms.RoomDetails"
+  },
+  "requests": [
+    {
+      "location": "RoomDetails-request.json"
+    }
+  ],
+  "operationType": "serverStreaming",
+  "invokerName": "grpc"
+}
