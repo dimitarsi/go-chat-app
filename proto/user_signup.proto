@@ -14,9 +14,9 @@ service SignupService {
 }
 
 message UserDetailsRequest {
-    string DisplayName = 1;
+    string display_name = 1;
 }
 
 message UserLogginResponse {
-    shared.User User = 1;
+    shared.User user = 1;
 }

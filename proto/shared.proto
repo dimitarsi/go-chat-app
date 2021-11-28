@@ -5,13 +5,13 @@ package shared;
 option go_package = "github.com/dimitarsi/go-chat-app/grpc/shared";
 
 message User {
-    string UserID = 1;
-    string DisplayName = 2;
+    string user_id = 1;
+    string display_name = 2;
 }
 
 message Room {
-    string RoomID = 1;
-    string RoomName = 2;
-    string RoomTopic = 3;
-    User Host = 4;
-}
+    string room_id = 1;
+    string room_name = 2;
+    string room_topic = 3;
+    User host = 4;
+} 

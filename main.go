@@ -20,7 +20,7 @@ func main() {
 
 	s := grpc.NewServer()
 
-	room.RegisterRoomsServer(s, &service.RoomService{})
+	room.RegisterRoomsServer(s, service.NewRoomService())
 
 	err = s.Serve(lis)
 
