@@ -1,6 +1,13 @@
 {
   "details": {
-    "methodFqn": "rooms.Rooms.RoomDetails"
+    "methodFqn": "rooms.Rooms.RoomDetails",
+    "mode": "grpc",
+    "metadata": [
+      {
+        "key": "grpc-timeout",
+        "value": "15"
+      }
+    ]
   },
   "requests": [
     {
